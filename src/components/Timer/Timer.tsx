@@ -3,6 +3,7 @@ import "./Timer.scss";
 import play from "../../assets/play.png";
 import pause from "../../assets/pause.png";
 import refresh from "../../assets/refresh.png";
+import Counter from "../Counter";
 
 const buttonComponent = {
   play: { key: "play", title: "Play", img: play },
@@ -18,6 +19,7 @@ function Timer() {
 
   return (
     <div className="wrapper">
+      <Counter />
       <div className="timer">00:00:00</div>
       <div className="button-list">
         {buttonList.map(btn => {
