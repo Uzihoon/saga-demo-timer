@@ -1,20 +1,16 @@
 import { takeEvery, all, fork } from "redux-saga/effects";
 
 // Saga
-import * as CounterSaga from "./counter";
+import * as TimerSaga from "./timer";
 
 // Reducer
-import * as CounterActions from "../redux/counter";
+import * as TimerActions from "../redux/timer";
 
 export default function* rootSaga() {
   // Root Saga
-  yield all([fork(handleCounter)]);
+  yield all([fork(handleTimer)]);
 }
 
-function* handleCounter() {
-  yield takeEvery(
-    CounterActions.plusAfterOneSeconds,
-    CounterSaga.plusAfterOneSeconds
-  );
-  yield takeEvery(CounterActions.plusRandom, CounterSaga.plusRandom);
+function* handleTimer() {
+  yield takeEvery(TimerActions.start, TimerSaga.start);
 }

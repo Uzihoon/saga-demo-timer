@@ -1,8 +1,8 @@
 import React from "react";
-import Counter from "./Counter";
+import Interval from "./Timer";
 
 function App() {
-  return <Counter />;
+  return <Interval />;
 }
 
 export default App;
