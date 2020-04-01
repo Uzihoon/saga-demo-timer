@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Timer.scss";
+
+// Assets
 import play from "../../assets/play.png";
 import pause from "../../assets/pause.png";
 import refresh from "../../assets/refresh.png";
 import restart from "../../assets/restart.png";
+
+// Hooks
 import useTimerActions from "../../hooks/timer/useTimerActions";
 import useTimer from "../../hooks/timer/useTimer";
 
