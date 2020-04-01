@@ -7,5 +7,11 @@ export default function useTimerActions() {
 
   const onStart = useCallback(() => dispatch(actions.start()), [dispatch]);
 
-  return { onStart };
+  const onStop = useCallback(() => dispatch(actions.stop()), [dispatch]);
+
+  const onPause = useCallback(() => dispatch(actions.pause()), [dispatch]);
+
+  const onRestart = useCallback(() => dispatch(actions.restart()), [dispatch]);
+
+  return { onStart, onStop, onPause, onRestart };
 }

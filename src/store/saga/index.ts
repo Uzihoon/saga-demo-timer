@@ -13,4 +13,5 @@ export default function* rootSaga() {
 
 function* handleTimer() {
   yield takeEvery(TimerActions.start, TimerSaga.start);
+  yield fork(TimerSaga.watcher);
 }
