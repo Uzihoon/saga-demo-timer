@@ -1,8 +1,8 @@
 import React from "react";
-import Interval from "./Timer";
+import Timer from "./Timer";
 
 function App() {
-  return <Interval />;
+  return <Timer />;
 }
 
 export default App;
