@@ -33,19 +33,10 @@ function Timer() {
 
   const [buttonList, setButtonList] = useState<Button[]>(["play", "refresh"]);
 
-  const startTimer = () => {
-    timerActions.onStart();
-    const _buttonList = buttonList.concat();
-    const playIndex = _buttonList.findIndex(btn => btn === "play");
-    if (playIndex < 0) return;
-    _buttonList[playIndex] = "pause";
-    setButtonList(_buttonList);
-  };
-
   const handleClick = (type: Button) => {
     switch (type) {
       case "play":
-        startTimer();
+        timerActions.onStart();
         break;
       case "pause":
         timerActions.onPause();
